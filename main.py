@@ -55,9 +55,9 @@ async def function6(ctx):
     response = os.system("ping -c 1 IP")
 
     if response == 0: 
-        await ctx.send(random.choice("Online"))
+        await ctx.send("Online")
     else:
-        await ctx.send(random.choice("Not Online"))
+        await ctx.send("Not Online")
 
 
 @bot.command() #Contacts dog API and sends picture of a pembroke dog
