@@ -57,7 +57,7 @@ async def function6(ctx):
     if response == 0: 
         await ctx.send(random.choice("Online"))
     else:
-        print("Not online")
+        await ctx.send(random.choice("Not Online"))
 
 
 @bot.command() #Contacts dog API and sends picture of a pembroke dog
