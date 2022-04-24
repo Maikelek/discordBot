@@ -15,7 +15,7 @@ bot = commands.Bot(command_prefix='.', description="Bot")
 
 @bot.command() #Lists all avaible functions / Not updated automatically
 async def function1(ctx):
-    await ctx.send("Commands are: " + "\n.function1" + "\n.function2" + "\n.function3" + "\n.function4" + "\n.function5" + "\n.function6")
+    await ctx.send("Commands are: " + "\n.function1" + "\n.function2" + "\n.function3" + "\n.function4" + "\n.function5" + "\n.function6" + "\n.function7" + "\n.function8")
 
 
 @bot.command() #You can ping discord user with @meno
@@ -28,7 +28,7 @@ async def function2(ctx, member:discord.Member=None):
 
 
 @bot.command() #You can ping author of the message || ping 1 user || ping 2 user @user1 @user2  
-async def nazovFunkcie4(ctx, member1:discord.Member=None, member2:discord.Member=None):
+async def function3(ctx, member1:discord.Member=None, member2:discord.Member=None):
   if member1 == None and member2 == None:
     await ctx.send(f"{ctx.message.author.name} example {str(random.randint(1, 100))} example")
   elif member1 != None and member2 == None:
@@ -39,19 +39,19 @@ async def nazovFunkcie4(ctx, member1:discord.Member=None, member2:discord.Member
 
 
 @bot.command() #Contacts cat API and sends picture of a cat
-async def nazovFunkcie5 (ctx): 
+async def function4(ctx): 
     response = requests.get('https://aws.random.cat/meow')
     data = response.json()
     await ctx.send(data['file'])
 
 @bot.command() #Chooses between 1 and 2
-async def nazovFunkcie6(ctx):
+async def function5(ctx):
     await ctx.send(random.choice("12"))
 
 
 @bot.command() #Pinging server / Works only on those servers you have access to the console
                #Ping -c 1 IP works only for Linux for Windows it is ping -n 1 IP
-async def server(ctx):
+async def function6(ctx):
     response = os.system("ping -c 1 IP")
 
     if response == 0: 
@@ -61,13 +61,13 @@ async def server(ctx):
 
 
 @bot.command() #Contacts dog API and sends picture of a pembroke dog
-async def nazovFunkcie7(ctx):
+async def function7(ctx):
     response = requests.get('https://dog.ceo/api/breed/pembroke/images/random')
     data = response.json()
     await ctx.send(data['message'])
 
 @bot.command() #Contacts dog API and sends picture of a random dog
-async def nazovFunkcie8(ctx): 
+async def function8(ctx): 
     response = requests.get('https://dog.ceo/api/breeds/image/random')
     data = response.json()
     await ctx.send(data['message'])
