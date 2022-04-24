@@ -18,7 +18,7 @@ async def function1(ctx):
     await ctx.send("Commands are: " + "\n.function1" + "\n.function2" + "\n.function3" + "\n.function4" + "\n.function5" + "\n.function6" + "\n.function7" + "\n.function8")
 
 
-@bot.command() #You can ping discord user with @meno
+@bot.command() #You can ping discord user with @user
 async def function2(ctx, member:discord.Member=None):
   if member == None:
     await ctx.send(f"Example {ctx.message.author.name} example {str(random.randint(1, 30))} example")
