@@ -154,6 +154,15 @@ async def on_message(message): #He does not respond to his own words
 
     if any(word in message.content for word in "word or {list[]/tuple()/variable}"):
       await message.channel.send("message")
+    
+    if isinstance(message.channel,discord.DMChannel): #Bot will save every Dm sent to him to a file.
+        currentTime = datetime.datetime.now()
+        timePlus = datetime.timedelta(hours=2)
+        currentTime = currentTime + timePlus
+        file = open(f"botDM.txt", "a")
+        file.write((currentTime.strftime("\n%Y-%m-%d %H:%M:%S "+ ": " + message.author.name + ": " + message.content + "\n")))
+        file.close()
+ 
 
 
 
