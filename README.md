@@ -3,6 +3,10 @@
 #
 
 ## Simple discord bot template with basic functions.
+* Send DMs to users by user Discord ID
+* Read DMs from users 
+* Store data in files
+* Send files
 * Reacts to words
 * Presence changer
 * Contacting APIs and getting photos
